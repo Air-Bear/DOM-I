@@ -79,8 +79,10 @@ textContent[3].children[1].textContent = siteContent["main-content"]["product-co
 textContent[4].children[0].textContent = siteContent["main-content"]["vision-h4"];
 textContent[4].children[1].textContent = siteContent["main-content"]["vision-content"];
 
+contact.children[1].style.whiteSpace = "pre";
+
 contact.children[0].textContent = siteContent["contact"]["contact-h4"];
-contact.children[1].textContent = siteContent["contact"]["address"];
+contact.children[1].textContent = "123 Way 456 Street\r\nSomewhere, USA";
 contact.children[2].textContent = siteContent["contact"]["phone"];
 contact.children[3].textContent = siteContent["contact"]["email"];
 
