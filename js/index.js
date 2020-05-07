@@ -39,4 +39,51 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+const ctaImg = document.getElementById("cta-img");
+const middleImg = document.getElementById("middle-img");
+const navItems = document.getElementsByTagName("a");
+const ctaHead = document.querySelector(".cta-text h1");
+const ctaBttn = document.querySelector(".cta-text button");
+const textContent = document.getElementsByClassName("text-content");
+const contact = document.querySelector(".contact");
+const copyright = document.querySelector("footer p");
+
+ctaImg.src = "img/header-img.png";
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+middleImg.src = "img/mid-page-accent.jpg";
+
+// navItems[0].textContent = siteContent["nav"]["nav-item-1"]; //gotta keep it DRY
+// navItems[1].textContent = siteContent["nav"]["nav-item-2"];
+// navItems[2].textContent = siteContent["nav"]["nav-item-3"];
+// navItems[3].textContent = siteContent["nav"]["nav-item-4"];
+// navItems[4].textContent = siteContent["nav"]["nav-item-5"];
+// navItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+for(var i = 0; i < navItems.length; i++){
+  navItems[i].textContent = siteContent["nav"]["nav-item-" + (i+1)];
+}
+
+ctaHead.style.whiteSpace = "pre";
+ctaHead.textContent = "DOM\r\nIs\r\nAwesome";
+
+ctaBttn.textContent = siteContent["cta"]["button"];
+
+textContent[0].children[0].textContent = siteContent["main-content"]["features-h4"]; 
+textContent[0].children[1].textContent = siteContent["main-content"]["features-content"];
+textContent[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+textContent[1].children[1].textContent = siteContent["main-content"]["about-content"];
+textContent[2].children[0].textContent = siteContent["main-content"]["services-h4"];
+textContent[2].children[1].textContent = siteContent["main-content"]["services-content"];
+textContent[3].children[0].textContent = siteContent["main-content"]["product-h4"];
+textContent[3].children[1].textContent = siteContent["main-content"]["product-content"];
+textContent[4].children[0].textContent = siteContent["main-content"]["vision-h4"];
+textContent[4].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+contact.children[1].style.whiteSpace = "pre";
+
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = "123 Way 456 Street\r\nSomewhere, USA";
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
+
+copyright.textContent = siteContent["footer"]["copyright"];
